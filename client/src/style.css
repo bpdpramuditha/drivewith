@@ -152,6 +152,54 @@ body {
   opacity: 0.80;
 }
 
+.filter.active {
+  background: #111;    
+  color: white;
+}
+
+.fleet-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.fleet-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-8px);
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.fleet-card-content {
+  padding: 20px;
+}
+
+.price {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 40px;
+  border: none;
+  background: #c9a24a;
+  cursor: pointer;
+}
+
 
 /* STATS */
 .stats {

@@ -1,6 +1,49 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+const cars = [
+  {
+    category: "SUV",
+    name: "Jeep Wrangler",
+    price: 120,
+    image:
+      "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    category: "Sedan",
+    name: "BMW 5 Series",
+    price: 150,
+    image:
+      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    category: "SUV",
+    name: "Toyota RAV4",
+    price: 90,
+    image:
+      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    category: "Sedan",
+    name: "Mercedes C-Class",
+    price: 140,
+    image:
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    category: "Luxury",
+    name: "Porsche Macan",
+    price: 200,
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+  },
+];
 
 export default function Home() {
+  const [filter, setFilter] = useState("All");
+
+  const filteredCars =
+    filter === "All" ? cars : cars.filter((car) => car.category === filter);
   return (
     <div className="page">
       {/* HEADER */}
@@ -55,10 +98,29 @@ export default function Home() {
         <h2 className="fleet-title">Choose Your Ride</h2>
 
         <div className="fleet-filters">
-          <button className="filter">All</button>
-          <button className="filter">SUV</button>
-          <button className="filter">Sedan</button>
-          <button className="filter">Luxury</button>
+          {["All", "SUV", "Sedan", "Luxury"].map((cat) => (
+            <button
+              key={cat}
+              className={`filter ${filter === cat ? "active" : ""}`}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* CAR GRID */}
+        <div className="fleet-grid">
+          {filteredCars.map((car, index) => (
+            <div className="fleet-card" key={index}>
+              <img src={car.image} alt={car.name} />
+              <div className="fleet-card-content">
+                <h3>{car.name}</h3>
+                <p className="price">${car.price} / day</p>
+                <button className="book-btn">Book on Turo</button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
