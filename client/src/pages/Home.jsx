@@ -48,6 +48,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Fleet */}
+      <section className="fleet">
+        <p className="fleet-subtitle">✦ THE FLEET</p>
+
+        <h2 className="fleet-title">Choose Your Ride</h2>
+
+        <div className="fleet-filters">
+          <button className="filter">All</button>
+          <button className="filter">SUV</button>
+          <button className="filter">Sedan</button>
+          <button className="filter">Luxury</button>
+        </div>
+      </section>
+
       {/* WHY US */}
       <section className="why">
         <p className="section-tag">✦ WHY US</p>

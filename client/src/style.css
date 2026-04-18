@@ -7,9 +7,8 @@
 
 .logo {
   font-size: 32px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-family: "Helvetica Neue";
 }
 
 .drive {
@@ -17,14 +16,13 @@
 }
 
 .with {
-  color: #c9a24a;
-  margin-left: 4px;
+  color: #f5c65a;
 }
 
 /* DIVIDER */
 .divider {
-  height: 1px;
-  width: 70%;
+  height: 2px;
+  width: 80%;
   background: #e6e6e6;
   margin: 0 auto;
 }
@@ -51,12 +49,12 @@
 }
 
 .highlight {
-  color: #c9a24a;
+  color: #f5c65a;
   font-style: italic;
 }
 
 .subtitle {
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
   opacity: 0.7;
   line-height: 1.8;
@@ -68,7 +66,7 @@
 body {
   margin: 0;
   font-family: "Playfair Display", serif;
-  background: #ffffff;
+  background: #f8f8f8;
   color: #111;
   text-align: center;
 }
@@ -87,13 +85,13 @@ body {
   padding: 14px 30px;
   font-size: 14px;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 .outline {
   background: white;
-  border: 1px solid #111;
+  border: none;
 }
 
 .outline:hover {
@@ -102,14 +100,58 @@ body {
 }
 
 .gold {
-  background: #c9a24a;
+  background: #f5c65a;
   border: none;
   color: black;
 }
 
 .gold:hover {
-  opacity: 0.85;
+  opacity: 0.80;
 }
+
+
+/*Fleet*/
+.fleet {
+  padding: 100px 120px;   
+  text-align: left; 
+  background: #f8f8f8;
+}
+
+.fleet-subtitle {
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #f5c65a;
+  margin-bottom: 20px;
+}
+
+.fleet-title {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: "sans-serif";
+  margin-bottom: 40px;
+}
+
+.fleet-filters {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.filter {
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: none;
+  background: #f5c65a;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px; 
+}
+
+.filter:hover {
+  opacity: 0.80;
+}
+
 
 /* STATS */
 .stats {
